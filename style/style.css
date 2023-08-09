@@ -49,13 +49,6 @@ main {
   line-height: 1.7;
 }
 
-/* .newsletter__list {
-  margin-top: 2rem;
-  list-style-image: url("../assets/images/icon-list.svg");
-  font-size: 1.6rem;
-  padding-left: 3rem;
-} */
-
 .newsletter__list {
   display: grid;
   grid-template-columns: min-content max-content;
@@ -88,9 +81,6 @@ ul.newsletter__list li {
   border-radius: 5px;
   border: 1px hsl(231, 7%, 60%) solid;
   cursor: pointer;
-}
-
-.form__input:hover {
 }
 
 .form__button {
@@ -174,4 +164,30 @@ ul.newsletter__list li {
 
 .success__mail {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    width: 375px;
+    padding: 0;
+    height: auto;
+    gap: 0;
+    padding-bottom: 3rem;
+    border-radius: 0;
+  }
+
+  .newsletter {
+    padding: 0 1rem;
+  }
+
+  .container__image {
+    grid-row: 1;
+    content: url("../assets/images/illustration-sign-up-mobile.svg");
+  }
 }
